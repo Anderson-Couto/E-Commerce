@@ -1,0 +1,36 @@
+@using ecommerce.Models
+@model List<Produto>
+
+@{
+    ViewData["Title"] = "Loja";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>E-Commerce do Couto</p>
+
+<table class="table">
+    <thead>
+        <tr>    
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Codigo</th>
+        <th>Categoria</th>
+        <th>Descrição</th>
+        <th>Qtd em Estoque</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.Id)</td>
+            <td>@Html.DisplayFor(modelItem => item.Nome)</td>
+            <td>@Html.DisplayFor(modelItem => item.Codigo)</td>
+            <td>@Html.DisplayFor(modelItem => item.Categoria)</td>
+            <td>@Html.DisplayFor(modelItem => item.Descricao)</td>
+            <td>@Html.DisplayFor(modelItem => item.QtdEstoque)</td>
+        </tr>
+    }
+    </tbody>
+</table>
+
