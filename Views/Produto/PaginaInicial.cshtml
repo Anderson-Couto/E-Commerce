@@ -17,6 +17,7 @@
         <th>Categoria</th>
         <th>Descrição</th>
         <th>Qtd em Estoque</th>
+        <th>Valor</th>
     </tr>
     </thead>
     <tbody>
@@ -29,6 +30,7 @@
             <td>@Html.DisplayFor(modelItem => item.Categoria)</td>
             <td>@Html.DisplayFor(modelItem => item.Descricao)</td>
             <td>@Html.DisplayFor(modelItem => item.QtdEstoque)</td>
+            <td>R$ @Html.DisplayFor(modelItem => item.Valor)</td>
         </tr>
     }
     </tbody>

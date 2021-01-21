@@ -32,7 +32,8 @@ namespace ecommerce.Data
                             cod_codigo,
                             tp_categoria,
                             txt_descricao,
-                            vl_qtdEstoque
+                            vl_qtdEstoque,
+                            vl_preco
                         FROM
                             TB_ECOMMERCE_PRODUTO
                         ";
@@ -53,7 +54,8 @@ namespace ecommerce.Data
                                         Codigo = (string)reader["cod_codigo"],
                                         Categoria = (string)reader["tp_categoria"],
                                         Descricao = (string)reader["txt_descricao"],
-                                        QtdEstoque = (int)reader["vl_qtdEstoque"]
+                                        QtdEstoque = (int)reader["vl_qtdEstoque"],
+                                        Valor = (decimal)reader["vl_preco"]
                                     }
                                 );
                             }

@@ -10,5 +10,6 @@ namespace ecommerce.Models
         public string Categoria { get; set; }
         public string Descricao { get; set; }
         public int QtdEstoque { get; set; }
+        public decimal Valor { get; set; }
     }
 }
